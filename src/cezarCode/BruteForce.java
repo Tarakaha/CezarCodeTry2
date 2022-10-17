@@ -5,7 +5,6 @@ import java.util.*;
 
 public class BruteForce extends Coder {
     static int searchKey;
-    static int possibleKey;
     static List<Integer> sortedValues = new ArrayList<>();
     static List<Character> sortedLetters = new ArrayList<>();
     static List<Integer> sortedValuesEncoded = new ArrayList<>();
@@ -19,8 +18,7 @@ public class BruteForce extends Coder {
         sort(comparedLetter, sortedLetters, sortedValues);
         searchKey = Math.abs(alphabetLowerCase.indexOf(sortedLetters.get(0))
                      - alphabetLowerCase.indexOf(sortedLettersEncoded.get(0)));
-        possibleKey = Math.abs(alphabetLowerCase.indexOf(sortedLettersEncoded.get(0))
-                     - alphabetLowerCase.indexOf(sortedLetters.get(1)));
+    
     }
 
     public static Map<Character, Integer> countLetters(String incomingText) {
