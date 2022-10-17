@@ -21,7 +21,7 @@ public class Main {
         } else if("bruteForce".equals(args[0])){
             String incomingSecondText = Files.readString(Path.of(args[2], ""));
             BruteForce.searchTheKey(incomingText, incomingSecondText);
-            System.out.println("Your key is " + BruteForce.searchKey /*+ " or " + BruteForce.possibleKey*/);
+            System.out.println("Your key is " + BruteForce.searchKey);
             Path outFilePath = Path.of(args[1] + "_decoded_With_BruteForce", "");
             String decoded = Coder.decoding(incomingText, BruteForce.searchKey );
             Files.writeString(outFilePath, decoded);
